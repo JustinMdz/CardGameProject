@@ -129,13 +129,11 @@
   <ItemGroup>
     <ClCompile Include="Card.cpp" />
     <ClCompile Include="CardGame.cpp" />
-    <ClCompile Include="CardPoint.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="MoniCard.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h" />
-    <ClInclude Include="CardPoint.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="DeckOfCard.h" />
     <ClInclude Include="MoniCard.h" />

@@ -24,9 +24,6 @@
     <ClCompile Include="Card.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="CardPoint.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="MoniCard.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -36,9 +33,6 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="Card.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="CardPoint.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="MoniCard.h">
