@@ -10,7 +10,6 @@ private :
 public:
 
 	Game();
-	void dealCard();
 	void startTheGame();
 	void endTheGame();
 	void runGame();

@@ -130,12 +130,15 @@
     <ClCompile Include="Card.cpp" />
     <ClCompile Include="CardGame.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="MarketOfMoni.cpp" />
     <ClCompile Include="MoniCard.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="DeckOfCard.h" />
+    <ClInclude Include="MarketOfMoni.h" />
     <ClInclude Include="MoniCard.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
