@@ -7,15 +7,15 @@ private:
 
 	string** saveMoniCard;
 	string* savePointCard;
+	
+	
 
 public:
 
 	DeckOfCard();
-
+	void dealCard();
 	void evaluatDeck();
 	void fillDeck();
-	void cardLimit();
 	void playerCardLimit();
 	void printDeckCard();
-
 };
