@@ -16,8 +16,9 @@ private:
 public:
 
 	DeckOfCard();
+
 	void dealCard();
-	void evaluatDeck();
+	void evaluateDeck();
 	void fillDeck();
 	void printDeckCard();
 };

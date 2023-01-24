@@ -1,4 +1,7 @@
-﻿  MarketOfMoni.cpp
+﻿  Card.cpp
+  DeckOfCard.cpp
+  MarketOfMoni.cpp
   MoniCard.cpp
+  Player.cpp
   Generando código...
   CardGame.vcxproj -> C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\x64\Debug\CardGame.exe

@@ -15,10 +15,10 @@ private:
 
 public:
 
-	MoniCard(){};
+	MoniCard();
 
-	int setCardPuntuation();
-	int getCardPuntuation(int);//creo que es void los setter y getters
+	void setCardPuntuation();
+    void getCardPuntuation();
 
 	void flipCard();
 	void printCard();
