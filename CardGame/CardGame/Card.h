@@ -6,7 +6,6 @@ class Card
 private:
 
 	int numberOfCards;
-	int puntuation;
 
 public:
 

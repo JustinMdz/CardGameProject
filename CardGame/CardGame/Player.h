@@ -16,8 +16,7 @@ public:
 
 	Player();
 	string fillPlayersNames(string);
+	void grabCard();
 	bool playerTurn();
 	int getPlayerPuntuation(int);
-	void grabCard();
-	void convertCard();
 };

@@ -10,6 +10,11 @@ string Player::fillPlayersNames (string nameOfPlayer) {
 }
 
 
+void Player::grabCard() {
+	string cardTaken;
+	cout << "Please take one card";
+	cin >> cardTaken;
+}
 
 bool Player::playerTurn() {
 	turnOfPlayer = true;
@@ -22,12 +27,17 @@ bool Player::playerTurn() {
 		}
 
 		if (cardsTaken < cardOnHand) {
-			cout << "Please take one card";
-			//guardar carta
+			grabCard();
 			cardsTaken++;
 		}
 	}
 	return turnOfPlayer;
+}
+
+int Player::getPlayerPuntuation(int playerPoints) {
+
+	return playerPoints;
+
 }
 
 

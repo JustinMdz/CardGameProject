@@ -6,6 +6,8 @@ class MarketOfMoni
 private:
 	string* pointStack;
 	string** marketOfMoni;
+	int cantCardsOnStacks[3];
+	int quantityStacks = 3;
 
 public:
 	MarketOfMoni();
