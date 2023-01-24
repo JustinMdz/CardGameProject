@@ -5,20 +5,37 @@ string Player::fillPlayersNames (string nameOfPlayer) {
 
 	cout << "Enter the player name: ";
 	cin >> nameOfPlayer;
-
 	return nameOfPlayer;
 }
 
 
-//
-
-bool Player::playerTurn(){
+bool Player::playerTurn() {
 	turnOfPlayer = true;
-	while(turnOfPlayer==true){
-	
-	//
-		turnOfPlayer = false;
+	int cardOnHand = 2;
+	int cardsTaken = 0;
+	while (turnOfPlayer == true) {
+
+		if (cardsTaken == cardOnHand) {
+			turnOfPlayer = false;
+		}
+
+		if (cardsTaken < cardOnHand) {
+			cout << "Please take one card";
+			//guardar carta
+			cardsTaken++;
+		}
 	}
 	return turnOfPlayer;
 }
+
+int Player::getPlayerPuntuation(int playerPoints) {
+
+
+	return playerPoints;
+}
+
+
+
+
+
 

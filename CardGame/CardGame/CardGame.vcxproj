@@ -133,6 +133,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="MoniCard.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="DeckOfCard.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h" />
