@@ -9,6 +9,7 @@ private:
 	int puntuation;
 
 public:
+
 	Card();
 	void cardOption();
 	void typeOfCard();

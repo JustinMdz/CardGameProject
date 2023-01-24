@@ -1,5 +1,6 @@
 #include "Player.h"
-#include <iostream>
+
+Player::Player() {}
 
 string Player::fillPlayersNames (string nameOfPlayer) {
 
@@ -7,6 +8,7 @@ string Player::fillPlayersNames (string nameOfPlayer) {
 	cin >> nameOfPlayer;
 	return nameOfPlayer;
 }
+
 
 
 bool Player::playerTurn() {
@@ -27,15 +29,6 @@ bool Player::playerTurn() {
 	}
 	return turnOfPlayer;
 }
-
-int Player::getPlayerPuntuation(int playerPoints) {
-
-
-	return playerPoints;
-}
-
-
-
 
 
 

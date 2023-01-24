@@ -24,16 +24,17 @@
     <ClCompile Include="Card.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="CardPoint.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="MoniCard.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="DeckOfCard.cpp">
+=======
+    <ClCompile Include="MarketOfMoni.cpp">
+>>>>>>> 966074ecaff84c0a6d6efff72e270fd6f0a1869a
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,9 +45,6 @@
     <ClInclude Include="Card.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="CardPoint.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="MoniCard.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
@@ -54,6 +52,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="DeckOfCard.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="MarketOfMoni.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

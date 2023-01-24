@@ -9,15 +9,18 @@ class MoniCard : public Card {
 private:
 
 	string moniCardName[6] = {"","","","","",""};
-	string monicardSide;
-	string pointsSide;
-	int puntuation;
+	string frontCardSide="moniSide";
+	string backCardSide="pointsSide";
+	int cardPuntuation;
 
 public:
-	MoniCard();
+
+	MoniCard(){};
+
 	int setCardPuntuation();
-	int getCardPuntuation(int);
-	void designOfMoniCard();
+	int getCardPuntuation(int);//creo que es void los setter y getters
+
+	void flipCard();
 	void printCard();
 };
 
