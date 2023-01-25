@@ -2,6 +2,18 @@
 
 Player::Player() {}
 
+void Player::setPlayerPuntuation() {
+
+
+}
+
+int Player::getPlayerPuntuation(int playerPoints) {
+
+	return playerPoints;
+
+}
+
+
 string Player::fillPlayersNames (string nameOfPlayer) {
 
 	cout << "Enter the player name: ";
@@ -32,12 +44,6 @@ bool Player::playerTurn() {
 		}
 	}
 	return turnOfPlayer;
-}
-
-int Player::getPlayerPuntuation(int playerPoints) {
-
-	return playerPoints;
-
 }
 
 

@@ -18,5 +18,7 @@ public:
 	string fillPlayersNames(string);
 	void grabCard();
 	bool playerTurn();
+	void setPlayerPuntuation();
 	int getPlayerPuntuation(int);
+
 };

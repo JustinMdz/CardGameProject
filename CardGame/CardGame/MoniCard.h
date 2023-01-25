@@ -1,10 +1,9 @@
 #include <iostream>
-#include "Card.h"
 
 #pragma once
 using namespace std;
 
-class MoniCard : public Card {
+class MoniCard {
 
 private:
 
@@ -18,7 +17,7 @@ public:
 	MoniCard(){};
 
 	void setCardPuntuation();
-    void getCardPuntuation();
+    int getCardPuntuation();
 
 	void flipCard();
 	void printCard();

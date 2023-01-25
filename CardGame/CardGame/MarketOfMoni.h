@@ -11,7 +11,7 @@ private:
 
 public:
 	MarketOfMoni();
-	void checkMarketOfMoni();//checa si tomaron una carta del mercado moni
+	void checkMarketOfMoni();
 	void shuffleCard();
 	void resetEmptyStack();
 };

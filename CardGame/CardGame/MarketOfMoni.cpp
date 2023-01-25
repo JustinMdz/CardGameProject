@@ -20,7 +20,4 @@ void MarketOfMoni::resetEmptyStack() {
 void MarketOfMoni::checkMarketOfMoni() {
 
 
-
-
-
 }
