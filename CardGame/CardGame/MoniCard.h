@@ -14,7 +14,7 @@ private:
 
 public:
 
-	MoniCard(){};
+	MoniCard();
 
 	void setCardPuntuation();
     int getCardPuntuation();
