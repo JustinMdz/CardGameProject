@@ -1,24 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-<<<<<<< HEAD
-    <ClCompile Include="CardGame.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="MarketOfMoni.cpp" />
-    <ClCompile Include="MoniCard.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="DeckOfCard.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="DeckOfCard.h" />
-    <ClInclude Include="MarketOfMoni.h" />
-    <ClInclude Include="MoniCard.h" />
-    <ClInclude Include="Player.h" />
-=======
-    <ClCompile Include="Card.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="CardGame.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -37,11 +19,11 @@
     <ClCompile Include="Player.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Card.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="DeckOfCard.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
@@ -57,14 +39,16 @@
     <ClInclude Include="Player.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Archivos de encabezado">
-      <UniqueIdentifier>{e6aa0acb-3da5-4eeb-9df6-c569cf64b706}</UniqueIdentifier>
+      <UniqueIdentifier>{dc38e45c-9eb9-4021-9380-ba42473a6757}</UniqueIdentifier>
     </Filter>
     <Filter Include="Archivos de origen">
-      <UniqueIdentifier>{805db26e-4687-4cee-9dbb-df2868e6c6db}</UniqueIdentifier>
+      <UniqueIdentifier>{75348817-f415-4137-aa54-a911f072ef7f}</UniqueIdentifier>
     </Filter>
->>>>>>> 322c364ba79fe7e6b4dbe5f5d52930f764cea28b
   </ItemGroup>
 </Project>
