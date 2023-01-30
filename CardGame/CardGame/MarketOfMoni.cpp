@@ -2,10 +2,10 @@
 
 void MarketOfMoni :: createMarket() {
 
-	moniMarket = new int* [rows];
+	moniMarket = new int* [row];
 
-	for (int numberOfRows = 0; numberOfRows < rows; numberOfRows++) {
-		moniMarket[numberOfRows] = new int[colums];
+	for (int numberOfRows = 0; numberOfRows < row; numberOfRows++) {
+		moniMarket[numberOfRows] = new int[colum];
 	}
 }
 
@@ -26,9 +26,9 @@ void MarketOfMoni::resetEmptyStack() {
 }
 bool MarketOfMoni::checkRepeatedly() {
 
-	for (int numberOfRows = 0; numberOfRows < rows; numberOfRows++) {
-		for (int numberOfColums = 0; numberOfColums < colums; numberOfColums++) {
-			if (repeated == moniMarket[numberOfRows][numberOfColums])
+	for (int numberOfRow = 0; numberOfRow < row; numberOfRow++) {
+		for (int numberOfColum = 0; numberOfColum < colum; numberOfColum++) {
+			if (repeated == moniMarket[numberOfRow][numberOfColum])
 				return true;
 		}
 	}
@@ -37,19 +37,26 @@ bool MarketOfMoni::checkRepeatedly() {
 
 void MarketOfMoni::shuffleCard() {
 
-	for (int numberOfRows = 0; numberOfRows < rows; numberOfRows++) {
+	for (int numberOfRow = 0; numberOfRow < row; numberOfRow++) {
 		cout << endl;
-		for (int numberOfColums = 0; numberOfColums < colums; numberOfColums++) {
+		for (int numberOfColum = 0; numberOfColum < colum; numberOfColum++) {
 
 			do
 				repeated = 1 + rand() % 55;
 			while (checkRepeatedly());
-			moniMarket[numberOfRows][numberOfColums] = repeated;
+			moniMarket[numberOfRow][numberOfColum] = repeated;
 		}
 	}
 }
 
-void MarketOfMoni::checkMarketOfMoni() {
+bool MarketOfMoni::checkMarketOfMoni() {
 
-
+	for (int numberOfRow = 0; numberOfRow < row; numberOfRow++) {
+		for (int numberOfColum = 0; numberOfColum < colum; numberOfColum++) {
+			card = moniMarket[numberOfRow][numberOfColum];
+			if (moniMarket[numberOfRow][numberOfColum] == card) {
+				return true;
+			}
+		}
+	}
 }

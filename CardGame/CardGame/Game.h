@@ -4,13 +4,11 @@
 class Game
 {
 private :
-	bool startGame;
-	bool endGame;
+	bool runGame;
 
 public:
 
 	Game();
 	void startTheGame();
 	void endTheGame();
-	void runGame();
 };
