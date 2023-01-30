@@ -4,7 +4,7 @@ class Card
 private:
 
 	int numberOfCards;
-	int puntuation;
+	int puntuation;//TODO: fix typo punctuation
 
 public:
 	Card();
