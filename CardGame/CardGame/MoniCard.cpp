@@ -1,26 +1,51 @@
 #include "MoniCard.h"
 
+MoniCard::MoniCard(MarketOfMoni* dataCard = NULL, MoniCard* cardNext = NULL, MoniCard* cardBefore = NULL) {
 
-void  MoniCard::setCardPuntuation() {
-
+	cardData = dataCard;
+	nextCard = cardNext;
+	beforeCard = cardBefore;
 }
 
-int   MoniCard::getCardPuntuation(){
-
-	return cardPuntuation;
+MoniCard::~MoniCard() {
+	delete moniCardNameTexture;
+	delete moniCardNameSprite;
+	delete cardData;
 }
 
-void MoniCard::flipCard() {
+void MoniCard::loadCardName() {
 
-	swap(frontCardSide,backCardSide);
+	for (int i = 0; i < 6; i++) {
+		moniCardNameTexture[i].loadFromFile("MoniCard" + to_string(i) + ".png");
+	}
 }
 
-void MoniCard::printCard() {
+void MoniCard::getSizeCard() {
 
-	cout << frontCardSide;
-	cout << backCardSide;
+	for (int i = 0; i < 6; i++) {
+		moniCardNameSprite[i].setTexture(moniCardNameTexture[i]);
+		moniCardNameSprite[i].setScale(150.f / moniCardNameSprite->getTexture()->getSize().x,
+			200.f / moniCardNameSprite->getTexture()->getSize().y);
+	}
 }
 
 
+//void  MoniCard::setCardPuntuation() {
+//
+//}
 
-
+//int  MoniCard::getCardPuntuation(){
+//
+//	return cardPuntuation;
+//}
+//
+//void MoniCard::flipCard() {
+//
+//	swap(frontCardSide,backCardSide);
+//}
+//
+//void MoniCard::printCard() {
+//
+//	cout << frontCardSide;
+//	cout << backCardSide;
+//}
