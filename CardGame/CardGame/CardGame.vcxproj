@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\CardGame\SFML-2.5.1\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Marconi\Desktop\UNA\1 Nivel\Verano 22-23 programacion\Proyecto progra1\Git hub 3\CardGameProject\CardGame\CardGame\SFML-2.5.1\include;C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\CardGame\SFML-2.5.1\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\CardGame\SFML-2.5.1\lib;C:\Users\Marconi\Desktop\UNA\1 Nivel\Verano 22-23 programacion\Proyecto progra1\Git hub 3\CardGameProject\CardGame\CardGame\SFML-2.5.1\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
