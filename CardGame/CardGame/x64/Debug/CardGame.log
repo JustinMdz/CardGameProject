@@ -1,2 +1,3 @@
-﻿  Node.cpp
-  CardGame.vcxproj -> C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\x64\Debug\CardGame.exe
+﻿DeckOfCard.obj : error LNK2019: símbolo externo "public: __cdecl Node::Node(void)" (??0Node@@QEAA@XZ) sin resolver al que se hace referencia en la función "public: void __cdecl DeckOfCard::fillDeck(class MoniCard *)" (?fillDeck@DeckOfCard@@QEAAXPEAVMoniCard@@@Z)
+DeckOfCard.obj : error LNK2019: símbolo externo "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl Node::toString(void)" (?toString@Node@@QEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) sin resolver al que se hace referencia en la función "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl DeckOfCard::toString(void)" (?toString@DeckOfCard@@QEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ)
+C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\x64\Debug\CardGame.exe : fatal error LNK1120: 2 externos sin resolver

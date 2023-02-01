@@ -6,29 +6,24 @@ class DeckOfCard {
 
 private:
 
-	string** saveMoniCard;
-	string** saveMoniCardAuxiliar;
-	string* savePointCard;
-	string* savePointCardAuxiliar;
-
-	string newCard;
-
-	int countMoniCardsAmount[6] = {0,0,0,0,0,0};
+	Node* first;
+	Node* current;
+	string moniCardDeck[6];
+	int countMoniCardsAmount[6] = { 0,0,0,0,0,0 };
 	int moniCardsOnDeck = 0;
-	int pointCardsOnDeck = 0;
-	
+
 
 public:
 
 	DeckOfCard();
-	void createPointCard();
-	void copyPointCardToAuxiliar();
-	void updatePointCardDeck();
 
-	void dealCard();
+	void fillDeck(MoniCard*);
 	void evaluateDeck();
-	void fillDeck();
+	void dealCard();
+
 	void printDeckCard();
+	string toString();
+	~DeckOfCard();
 };
 
 
