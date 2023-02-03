@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "DeckOfCard.h"
 using namespace std;
 
 class Player {
@@ -16,9 +17,7 @@ public:
 
 	Player();
 	string fillPlayersNames(string);
-	void grabCard();
-	bool playerTurn();
+	bool playerTurn(DeckOfCard*, MoniCard*, MoniCard*);
 	void setPlayerPuntuation();
 	int getPlayerPuntuation(int);
-
 };

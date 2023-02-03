@@ -6,6 +6,5 @@ private:
 public:
 	Rules();
 	~Rules();
-
 };
 

@@ -3,7 +3,6 @@
 using namespace std;
 
 class DeckOfCard {
-
 private:
 
 	Node* first;
@@ -12,19 +11,14 @@ private:
 	int countMoniCardsAmount[6] = { 0,0,0,0,0,0 };
 	int moniCardsOnDeck = 0;
 
-
 public:
 
 	DeckOfCard();
-
 	void fillDeck(MoniCard*);
+	void dealCard(DeckOfCard*, Node*, MoniCard*);
 	void evaluateDeck();
-	void dealCard();
-
 	void printDeckCard();
-	string toString();
+	void grabCard(MoniCard*, MoniCard*);
+	//string toString();
 	~DeckOfCard();
 };
-
-
-

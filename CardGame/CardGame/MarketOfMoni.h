@@ -34,4 +34,3 @@ public:
 	void getmarketWindow();
 	void closeOfWindow();;
 };
-

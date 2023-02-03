@@ -13,27 +13,30 @@ private:
 	MarketOfMoni* cardData;
 	MoniCard* nextCard;
 	MoniCard* beforeCard;
+
+	string frontCardSide = "moniSide";
+	string backCardSide = "pointsSide";
+	string cardSideType;
+	bool cardSideStatus;
+
 	//
 	int quantityCard = 6;
 	Texture* moniCardNameTexture = new Texture[quantityCard];
 	Sprite* moniCardNameSprite = new Sprite[quantityCard];
 
 	//
-	string frontCardSide = "moniSide";
-	string backCardSide = "pointsSide";
-	int cardPuntuation;
 
+	int cardPuntuation;
 public:
 
 	MoniCard(MarketOfMoni*, MoniCard*, MoniCard*);
 	~MoniCard();
-
+	bool getCardSide(MoniCard*);
 	//void setCardPuntuation();
-    //int getCardPuntuation();
+	//int getCardPuntuation();
 	//void flipCard();
 	//void printCard();
 
 	void loadCardName();
 	void getSizeCard();
 };
-

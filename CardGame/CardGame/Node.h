@@ -5,22 +5,22 @@
 class Node {
 
 public:
-		MoniCard* dataCard;
-		Node* nextNode;
-		Node *lastNode;
+	MoniCard* dataCard;
+	Node* nextNode;
+	Node* lastNode;
 
-		Node();
-		Node(MoniCard*, Node*, Node*);
-		Node(MoniCard*, Node*);
-		void  setData(MoniCard* ptrDataCard);
-		MoniCard* getDataCard();
+	Node();
+	Node(MoniCard*, Node*, Node*);
+	Node(MoniCard*, Node*);
+	void  setData(MoniCard* ptrDataCard);
+	MoniCard* getDataCard();
 
-		void setNextNode(Node* next);
-		Node* getNextNode();
+	void setNextNode(Node* next);
+	Node* getNextNode();
 
-		void setLastNode(Node* next);
-		Node* getLastNode();
+	void setLastNode(Node* next);
+	Node* getLastNode();
 
-		string toString();
-		~Node();
+	string toString();
+	~Node();
 };

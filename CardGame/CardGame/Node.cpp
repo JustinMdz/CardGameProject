@@ -1,6 +1,10 @@
 #include "Node.h"
 
-Node::Node(MoniCard* data = NULL, Node* next = NULL, Node* last=NULL) {
+Node::Node() {
+
+}
+
+Node::Node(MoniCard* data = NULL, Node* next = NULL, Node* last = NULL) {
 	dataCard = data;
 	nextNode = next;
 	lastNode = last;
@@ -15,24 +19,13 @@ void Node::setData(MoniCard* ptrDataCard) {
 }
 
 MoniCard* Node::getDataCard() {
-    return dataCard;
+	return dataCard;
 }
 
 void Node::setNextNode(Node* next) {
-    nextNode = next;
+	nextNode = next;
 }
 
 Node* Node::getNextNode() {
-    return nextNode;
+	return nextNode;
 }
-
-
-
-
-
-
-
-
-
-
-
