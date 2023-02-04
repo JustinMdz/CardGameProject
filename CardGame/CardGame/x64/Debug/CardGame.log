@@ -1,2 +1,6 @@
-﻿  Node.cpp
-  CardGame.vcxproj -> C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\x64\Debug\CardGame.exe
+﻿  MoniCard.cpp
+  Node.cpp
+  Player.cpp
+  DeckOfCard.cpp
+  Generando código...
+  CardGame.vcxproj -> E:\CardGame\x64\Debug\CardGame.exe

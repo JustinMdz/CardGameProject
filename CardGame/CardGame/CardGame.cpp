@@ -4,12 +4,8 @@ using namespace std;
 
 int main()
 {
-<<<<<<< HEAD
-  //TODO: implementar
-=======
 	MarketOfMoni* cardMarket;
-	cardMarket = new MarketOfMoni;
+	cardMarket = new MarketOfMoni();
 
 	delete cardMarket;
->>>>>>> develop
 }

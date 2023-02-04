@@ -1,67 +1,64 @@
 #include "DeckOfCard.h"
 
-void DeckOfCard::createPointCard() {
-
-	savePointCard = new string[pointCardsOnDeck];
+DeckOfCard::DeckOfCard() {
+	first = current = NULL;
 }
 
-void DeckOfCard::copyPointCardToAuxiliar() {
-	 savePointCardAuxiliar = new string[pointCardsOnDeck];
+void DeckOfCard::fillDeck(MoniCard* card) {
+	Node* newNode = new Node();
+	newNode->dataCard = card;
+	newNode->nextNode = NULL;
 
-	 for (int numberOfPointCard = 0; numberOfPointCard < pointCardsOnDeck; numberOfPointCard++) {
-		 savePointCardAuxiliar[numberOfPointCard] = savePointCard[numberOfPointCard];
-	 }
-}
-
-void DeckOfCard::updatePointCardDeck() {
-
-	for (int numberOfPointCard = 0; numberOfPointCard < pointCardsOnDeck; numberOfPointCard++) {
-		savePointCard[numberOfPointCard]=savePointCardAuxiliar[numberOfPointCard];
+	if (first == NULL) {
+		first = newNode;
 	}
-
-	for (int numberOfPointCard = pointCardsOnDeck; numberOfPointCard < (pointCardsOnDeck+1); numberOfPointCard++) {
-		 savePointCard[numberOfPointCard]=newCard;
+	if (first != NULL) {
+		Node* auxNode = first;
+		while (auxNode->nextNode != NULL) {
+			auxNode = auxNode->nextNode;
+		}
+		auxNode->nextNode = newNode;
 	}
 }
 
-void DeckOfCard::printDeckCard() {
+void DeckOfCard::grabMoniCard(MoniCard* firstCardToTake, MoniCard* secondCardToTake) {
 
-	for (int i = 0; i < pointCardsOnDeck; i++) {
-		cout <<savePointCard[i] << "     ";
-	}
-	cout << endl;
-
-	for (int i = 0; i < moniCardsOnDeck; i++) {
-		cout << countMoniCardsAmount[i] << "  ";
+	//llenar vector de listas de cartas de moni
+	if ((firstCardToTake->flipCard() == true) && (secondCardToTake->flipCard() == true)) {
+		fillDeck(firstCardToTake);
+		//delete nodo de market
+		fillDeck(secondCardToTake);
+		//delete nodo de market
 	}
 }
 
+void DeckOfCard::grabPointCar(MoniCard* cardToTake) {
 
+	if (cardToTake->flipCard() == false) {
+		fillDeck(cardToTake);
+		//delete nodo de market
+	}
+}
 
+void DeckOfCard::dealCard(DeckOfCard* victimsDeck, Node* stolenCard, MoniCard* card) {
 
+	fillDeck(card);
+	Node* indexNode = new Node();
+	indexNode = victimsDeck->first;
+	while (indexNode != NULL || indexNode == stolenCard) {
+		if (indexNode == stolenCard) {
+			stolenCard->~Node();
+		}
+	}
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//string DeckOfCard::toString() {
+//	stringstream ss;
+//	current = first;
+//	ss << "Point Cards." << endl;
+//	while (current != NULL) {
+//		ss << current->toString() << endl;
+//		current = current->getNextNode();
+//	}
+//	return ss.str();
+//}

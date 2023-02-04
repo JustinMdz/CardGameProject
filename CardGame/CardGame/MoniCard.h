@@ -10,30 +10,25 @@ class MoniCard {
 
 private:
 
-	MarketOfMoni* cardData;
 	MoniCard* nextCard;
 	MoniCard* beforeCard;
-	//
-	int quantityCard = 6;
-	Texture* moniCardNameTexture = new Texture[quantityCard];
-	Sprite* moniCardNameSprite = new Sprite[quantityCard];
-
-	//
-	string frontCardSide = "moniSide";
-	string backCardSide = "pointsSide";
-	int cardPuntuation;
+	int* cardPuntuation;
+	string cardSideType;
+	bool cardSideStatus;
+	Texture* moniCardNameTexture = new Texture[6];
+	Sprite* moniCardNameSprite = new Sprite[6];
 
 public:
-
-	MoniCard(MarketOfMoni*, MoniCard*, MoniCard*);
+	//MoniCard(Rules*, MoniCard*, MoniCard*);
+	MoniCard(int*, MoniCard*, MoniCard*);
 	~MoniCard();
-
+	string getCardTypeSide();
+	bool getCardSide();
+	bool flipCard();
 	//void setCardPuntuation();
     //int getCardPuntuation();
-	//void flipCard();
 	//void printCard();
 
 	void loadCardName();
 	void getSizeCard();
 };
-

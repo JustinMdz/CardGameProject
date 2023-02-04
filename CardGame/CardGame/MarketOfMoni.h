@@ -9,14 +9,6 @@ using namespace sf;
 class MarketOfMoni
 {
 private:
-	//string* pointStack;
-	//int** moniMarket;
-	//int cantCardsOnStacks[3];
-	//int quantityStacks = 3;
-	//int row = 3;
-	//int colum = 2;
-	//int repeated = 0;
-	//int card;
 
 	//int quantityMoniCard = 6;
 	int broad = 1800;
@@ -25,7 +17,6 @@ private:
 	Texture* boarWood = new Texture;
 	Sprite* boarWoodSprite = new Sprite(*boarWood);
 	Event* windowClose = new Event;
-
 	//
 	//Texture* moniMarket = new Texture[quantityMoniCard];
 	//Sprite* moniMarketSprite = new Sprite[quantityMoniCard] ;
