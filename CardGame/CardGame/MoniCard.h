@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "MarketOfMoni.h"
+#include "Node.h"
 
 using namespace std;
 using namespace sf;
@@ -10,9 +10,8 @@ class MoniCard {
 
 private:
 
-	MarketOfMoni* cardData;
-	MoniCard* nextCard;
-	MoniCard* beforeCard;
+	Node* firtsCard;
+	Node* currentCard;
 
 	string frontCardSide = "moniSide";
 	string backCardSide = "pointsSide";
@@ -29,9 +28,10 @@ private:
 	int cardPuntuation;
 public:
 
-	MoniCard(MarketOfMoni*, MoniCard*, MoniCard*);
-	~MoniCard();
-	bool getCardSide(MoniCard*);
+	MoniCard();
+	void insertCard(int);
+	string toString();
+	//bool getCardSide(MoniCard*);
 	//void setCardPuntuation();
 	//int getCardPuntuation();
 	//void flipCard();

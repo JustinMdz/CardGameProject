@@ -1,24 +1,19 @@
 #include "Node.h"
 
-Node::Node() {
-
-}
-
-Node::Node(MoniCard* data = NULL, Node* next = NULL, Node* last = NULL) {
+Node::Node(int data) {
 	dataCard = data;
-	nextNode = next;
-	lastNode = last;
+	nextNode = nullptr;
+	lastNode = nullptr;
 }
 
-Node::~Node() {
-	delete dataCard;
-}
+//Node::~Node() {
+//}
 
-void Node::setData(MoniCard* ptrDataCard) {
+void Node::setData(int ptrDataCard) {
 	dataCard = ptrDataCard;
 }
 
-MoniCard* Node::getDataCard() {
+int Node::getDataCard() {
 	return dataCard;
 }
 
@@ -28,4 +23,12 @@ void Node::setNextNode(Node* next) {
 
 Node* Node::getNextNode() {
 	return nextNode;
+}
+
+void Node::setLastNode(Node* last) {
+	lastNode = last;
+}
+
+Node* Node::getLastNode() {
+	return lastNode;
 }

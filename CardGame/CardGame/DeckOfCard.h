@@ -14,11 +14,10 @@ private:
 public:
 
 	DeckOfCard();
-	void fillDeck(MoniCard*);
-	void dealCard(DeckOfCard*, Node*, MoniCard*);
+	void fillDeck(int);
+	void dealCard(DeckOfCard*, Node*, int);
 	void evaluateDeck();
 	void printDeckCard();
-	void grabCard(MoniCard*, MoniCard*);
+	void grabCard();// MoniCard*, MoniCard*);
 	//string toString();
-	~DeckOfCard();
 };

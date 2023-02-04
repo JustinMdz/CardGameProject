@@ -17,7 +17,7 @@ public:
 
 	Player();
 	string fillPlayersNames(string);
-	bool playerTurn(DeckOfCard*, MoniCard*, MoniCard*);
+	bool playerTurn(DeckOfCard*/*,MoniCard*, MoniCard**/ );
 	void setPlayerPuntuation();
 	int getPlayerPuntuation(int);
 };

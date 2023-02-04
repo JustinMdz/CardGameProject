@@ -2,13 +2,7 @@
 
 MarketOfMoni::MarketOfMoni() {
 
-	gameBackground = new RenderWindow(VideoMode(broad, alture), "windowMarket");
-	boarWood->loadFromFile("backgroundWood.png");
-	boarWoodSprite->setScale((float)gameBackground->getSize().x / (float)boarWoodSprite->getTexture()->getSize().x,
-		(float)gameBackground->getSize().y / (float)boarWoodSprite->getTexture()->getSize().y);
-
-	getmarketWindow();
-	delete gameBackground;
+	
 }
 
 //void MarketOfMoni::getmarketPositionCard() {
@@ -24,38 +18,6 @@ MarketOfMoni::MarketOfMoni() {
 //	moniMarketSprite[4].setPosition(750, 600);
 //	moniMarketSprite[5].setPosition(950, 600);
 //}
-
-void MarketOfMoni::creategameBackground() {
-
-	gameBackground->clear();
-	gameBackground->draw(*boarWoodSprite);
-	/*for (int i = 0; i < 9; i++) {
-		gameBackground->draw(moniMarketSprite[i]);
-	}*/
-	gameBackground->display();
-}
-
-void MarketOfMoni::getmarketWindow() {
-
-	while (gameBackground->isOpen()) {
-		creategameBackground();
-		closeOfWindow();
-	}
-}
-
-void MarketOfMoni::closeOfWindow() {
-
-	while (gameBackground->pollEvent(*windowClose)) {
-
-		switch (windowClose->type) {
-
-		case Event::Closed:
-			exit(1);
-			break;
-		}
-	}
-}
-
 
 //
 //void MarketOfMoni :: createMarket() {
