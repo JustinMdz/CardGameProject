@@ -1,54 +1,49 @@
 #include "MoniCard.h"
 
-MoniCard::MoniCard() {
+MoniCard::MoniCard(int* puntuationCard,MoniCard* cardNext = NULL, MoniCard* cardBefore = NULL) {
 
-	this->firtsCard = nullptr;
-	this->currentCard = nullptr;
+	cardPuntuation = puntuationCard;
+	nextCard = cardNext;
+	beforeCard = cardBefore;
 }
 
-void MoniCard::insertCard(int card) {
+MoniCard::~MoniCard() {}
 
-	Node* insert = new Node(card);
-	if (firtsCard == nullptr) {
-		firtsCard = insert;
-	}
-	else {
-		currentCard = firtsCard;
-		while (currentCard->getNextNode() != nullptr) {
-			currentCard = currentCard->getNextNode();
-		}
-		currentCard->setNextNode(insert);
-		insert->setLastNode(currentCard);
+void MoniCard::loadCardName() {
+
+	for (int i = 0; i < 6; i++) {
+		moniCardNameTexture[i].loadFromFile("MoniCard" + to_string(i) + ".png");
 	}
 }
 
-string MoniCard::toString() {
-
-	stringstream ouput;
-	currentCard = firtsCard;
-	while (currentCard != nullptr) {
-		ouput << currentCard->getDataCard() << endl;
-		currentCard = currentCard->getNextNode();
+string MoniCard::getCardTypeSide() {
+	if (cardSideStatus==true) {
+		cardSideType = "MoniCardSide";
 	}
-	return ouput.str();
+
+	if (cardSideStatus == false) {
+		cardSideType = "PointCardSide";
+	}
+	return cardSideType;
 }
 
+bool MoniCard::getCardSide() {
+	return cardSideStatus;
+}
 
-//void MoniCard::loadCardName() {
-//
-//	for (int i = 0; i < 6; i++) {
-//		moniCardNameTexture[i].loadFromFile("MoniCard" + to_string(i) + ".png");
-//	}
-//}
-//
-//void MoniCard::getSizeCard() {
-//
-//	for (int i = 0; i < 6; i++) {
-//		moniCardNameSprite[i].setTexture(moniCardNameTexture[i]);
-//		moniCardNameSprite[i].setScale(150.f / moniCardNameSprite->getTexture()->getSize().x,
-//			200.f / moniCardNameSprite->getTexture()->getSize().y);
-//	}
-//}
+bool MoniCard::flipCard() {
+	cardSideStatus = !cardSideStatus;
+	return cardSideStatus;
+}
+
+void MoniCard::getSizeCard() {
+
+	for (int i = 0; i < 6; i++) {
+		moniCardNameSprite[i].setTexture(moniCardNameTexture[i]);
+		moniCardNameSprite[i].setScale(150.f / moniCardNameSprite->getTexture()->getSize().x,
+			200.f / moniCardNameSprite->getTexture()->getSize().y);
+	}
+}
 
 //void  MoniCard::setCardPuntuation() {
 //
@@ -59,10 +54,7 @@ string MoniCard::toString() {
 //	return cardPuntuation;
 //}
 //
-//void MoniCard::flipCard() {
-//
-//	swap(frontCardSide,backCardSide);
-//}
+
 //
 //void MoniCard::printCard() {
 //

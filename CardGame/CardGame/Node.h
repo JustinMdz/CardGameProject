@@ -1,23 +1,26 @@
+#include "MoniCard.h"
 #include <iostream>
 #include <sstream>
 
 class Node {
 
 public:
+		MoniCard* dataCard;
+		Node* nextNode;
+		Node *lastNode;
 
-	int dataCard;
-	Node* nextNode;
-	Node* lastNode;
+		Node();
+		Node(MoniCard*, Node*, Node*);
+		Node(MoniCard*, Node*);
+		void  setData(MoniCard* ptrDataCard);
+		MoniCard* getDataCard();
 
-	Node(int);
-	//Node(MoniCard*, Node*);
-	void  setData(int);
-	int getDataCard();
+		void setNextNode(Node* next);
+		Node* getNextNode();
 
-	void setNextNode(Node* next);
-	Node* getNextNode();
+		void setLastNode(Node* next);
+		Node* getLastNode();
 
-	void setLastNode(Node* next);
-	Node* getLastNode();
-
+		string toString();
+		~Node();
 };

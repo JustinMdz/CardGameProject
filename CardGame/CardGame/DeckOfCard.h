@@ -7,17 +7,19 @@ private:
 
 	Node* first;
 	Node* current;
-	string moniCardDeck[6];
+	MoniCard* moniCardDeck[6];
 	int countMoniCardsAmount[6] = { 0,0,0,0,0,0 };
 	int moniCardsOnDeck = 0;
 
 public:
 
 	DeckOfCard();
-	void fillDeck(int);
-	void dealCard(DeckOfCard*, Node*, int);
+	void fillDeck(MoniCard*);
+	void dealCard(DeckOfCard*, Node*, MoniCard*);
 	void evaluateDeck();
 	void printDeckCard();
-	void grabCard();// MoniCard*, MoniCard*);
+	void grabMoniCard(MoniCard*, MoniCard*);
+	void grabPointCar(MoniCard*);
 	//string toString();
+	~DeckOfCard();
 };

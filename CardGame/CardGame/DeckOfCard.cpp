@@ -1,59 +1,56 @@
-//#include "DeckOfCard.h"
-//
-//DeckOfCard::DeckOfCard() {
-//	this->first = nullptr;
-//	this->current = nullptr;
-//}
-//
-//void DeckOfCard::fillDeck(int card) {
-//
-//	Node* insert = new Node(card);
-//	if (first == nullptr) {
-//		first = insert;
-//	}
-//	else {
-//		current = first;
-//		while (current->getNextNode() != nullptr) {
-//			current = current->getNextNode();
-//		}
-//		current->setNextNode(insert);
-//		insert->setLastNode(current);
-//	}
-//}
-//
-////void DeckOfCard::grabCard(MoniCard* firstCardToTake, MoniCard* secondCardToTake) {
-////	/*
-////		llamar a funcion obtener lado de carta
-////	if (carta igual a pointSide) {
-////		deck toma la carta de MarketOfMoni
-////			filldeck
-////			delete nodo de market
-////	}
-////
-////		if(carta 1 igual a moniside y carta 2 igual a moniSide){
-////		deck toma la carta de MarketOfMoni
-////			filldeckMonicarss
-////			delete nodo de market
-////
-////			deck toma la carta de MarketOfMoni
-////			filldeckMonicarss
-////			delete nodo de market
-////		}
-////	*/
-////}
-//
-//void DeckOfCard::dealCard(DeckOfCard* victimsDeck, Node* stolenCard, int card) {
-//
-//	fillDeck(card);
-//
-//	Node* indexNode = new Node(card);
-//	indexNode = victimsDeck->first;
-//	while (indexNode != NULL || indexNode == stolenCard) {
-//		if (indexNode == stolenCard) {
-//			stolenCard->~Node();
-//		}
-//	}
-//}
+#include "DeckOfCard.h"
+
+DeckOfCard::DeckOfCard() {
+	first = current = NULL;
+}
+
+void DeckOfCard::fillDeck(MoniCard* card) {
+	Node* newNode = new Node();
+	newNode->dataCard = card;
+	newNode->nextNode = NULL;
+
+	if (first == NULL) {
+		first = newNode;
+	}
+	if (first != NULL) {
+		Node* auxNode = first;
+		while (auxNode->nextNode != NULL) {
+			auxNode = auxNode->nextNode;
+		}
+		auxNode->nextNode = newNode;
+	}
+}
+
+void DeckOfCard::grabMoniCard(MoniCard* firstCardToTake, MoniCard* secondCardToTake) {
+
+	//llenar vector de listas de cartas de moni
+	if ((firstCardToTake->flipCard() == true) && (secondCardToTake->flipCard() == true)) {
+		fillDeck(firstCardToTake);
+		//delete nodo de market
+		fillDeck(secondCardToTake);
+		//delete nodo de market
+	}
+}
+
+void DeckOfCard::grabPointCar(MoniCard* cardToTake) {
+
+	if (cardToTake->flipCard() == false) {
+		fillDeck(cardToTake);
+		//delete nodo de market
+	}
+}
+
+void DeckOfCard::dealCard(DeckOfCard* victimsDeck, Node* stolenCard, MoniCard* card) {
+
+	fillDeck(card);
+	Node* indexNode = new Node();
+	indexNode = victimsDeck->first;
+	while (indexNode != NULL || indexNode == stolenCard) {
+		if (indexNode == stolenCard) {
+			stolenCard->~Node();
+		}
+	}
+}
 
 //string DeckOfCard::toString() {
 //	stringstream ss;

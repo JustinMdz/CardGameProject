@@ -11,6 +11,12 @@ class MarketOfMoni
 private:
 
 	//int quantityMoniCard = 6;
+	int broad = 1800;
+	int alture = 950;
+	RenderWindow* gameBackground;
+	Texture* boarWood = new Texture;
+	Sprite* boarWoodSprite = new Sprite(*boarWood);
+	Event* windowClose = new Event;
 	//
 	//Texture* moniMarket = new Texture[quantityMoniCard];
 	//Sprite* moniMarketSprite = new Sprite[quantityMoniCard] ;
@@ -24,5 +30,8 @@ public:
 	void resetEmptyStack();
 
 	//void getmarketPositionCard();
-
+	void creategameBackground();
+	void getmarketWindow();
+	void closeOfWindow();;
 };
+
