@@ -1,6 +1,9 @@
-﻿  MoniCard.cpp
+﻿  CardGame.cpp
+  Game.cpp
+  MarketOfMoni.cpp
+  MoniCard.cpp
   Node.cpp
   Player.cpp
   DeckOfCard.cpp
   Generando código...
-  CardGame.vcxproj -> E:\CardGame\x64\Debug\CardGame.exe
+  CardGame.vcxproj -> C:\Users\Marconi\Desktop\UNA\1 Nivel\Verano 22-23 programacion\Proyecto progra1\Git hub 8\CardGameProject\CardGame\x64\Debug\CardGame.exe
