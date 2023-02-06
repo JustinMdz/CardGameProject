@@ -12,7 +12,7 @@ private:
 	int pointCounterOfPlayerOne = 0;
 	int pointCounterOfPlayerTwo = 0;
 	bool turnOfPlayer;
-
+	
 public:
 
 	Player();

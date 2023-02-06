@@ -132,6 +132,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CardDesign.cpp" />
     <ClCompile Include="CardGame.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="MarketOfMoni.cpp" />
@@ -142,6 +143,7 @@
     <ClCompile Include="Rules.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CardDesign.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="DeckOfCard.h" />
     <ClInclude Include="MarketOfMoni.h" />
