@@ -1,14 +1,2 @@
-﻿  CardDesign.cpp
-C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\CardGame\CardDesign.h(10,10): error C3646: 'cardTexture': especificador de invalidación desconocido
-C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\CardGame\CardDesign.h(10,21): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\CardGame\CardDesign.h(11,9): error C3646: 'cardSprite': especificador de invalidación desconocido
-C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\CardGame\CardDesign.h(11,19): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\CardGame\CardDesign.cpp(3,12): error C2512: 'CardDesign': no hay disponible un constructor predeterminado adecuado
-C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\CardGame\CardDesign.h(6,7): message : vea la declaración de 'CardDesign'
-C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\CardGame\CardDesign.cpp(8,10): error C2065: 'cardTexture': identificador no declarado
-C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\CardGame\CardDesign.cpp(13,5): error C2065: 'cardSprite': identificador no declarado
-C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\CardGame\CardDesign.cpp(13,27): error C2065: 'cardSprite': identificador no declarado
-C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\CardGame\CardDesign.cpp(19,51): error C2512: 'CardDesign::CardDesign': no hay disponible un constructor predeterminado adecuado
-C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\CardGame\CardDesign.cpp(19,51): message : al hacer coincidir la lista de argumentos '()'
-  Rules.cpp
-  Generando código...
+﻿  Player.cpp
+  CardGame.vcxproj -> C:\Users\justi\OneDrive\Documentos\Visual Studio 2022\Git Hub\CardGameProject\CardGame\x64\Debug\CardGame.exe

@@ -1,23 +1,21 @@
 #include "MoniCard.h"
 
-MoniCard::MoniCard(int* puntuationCard,MoniCard* cardNext = NULL, MoniCard* cardBefore = NULL) {
-
+MoniCard::MoniCard(int* puntuationCard, MoniCard* cardNext = NULL, MoniCard* cardBefore = NULL) {
 	cardPuntuation = puntuationCard;
 	nextCard = cardNext;
 	beforeCard = cardBefore;
 }
 
-MoniCard::~MoniCard() {}
+MoniCard::MoniCard(Sprite cardMoni_Sprite, Sprite cardPoint_Sprite) {
 
-void MoniCard::loadCardName() {
-
-	for (int i = 0; i < 6; i++) {
-		moniCardNameTexture[i].loadFromFile("MoniCard" + to_string(i) + ".png");
-	}
+	pointCardSprite = cardPoint_Sprite;
+	moniCardSprite = cardMoni_Sprite;
 }
 
+MoniCard::~MoniCard() {}
+
 string MoniCard::getCardTypeSide() {
-	if (cardSideStatus==true) {
+	if (cardSideStatus == true) {
 		cardSideType = "MoniCardSide";
 	}
 
@@ -36,14 +34,6 @@ bool MoniCard::flipCard() {
 	return cardSideStatus;
 }
 
-void MoniCard::getSizeCard() {
-
-	for (int i = 0; i < 6; i++) {
-		moniCardNameSprite[i].setTexture(moniCardNameTexture[i]);
-		moniCardNameSprite[i].setScale(150.f / moniCardNameSprite->getTexture()->getSize().x,
-			200.f / moniCardNameSprite->getTexture()->getSize().y);
-	}
-}
 
 //void  MoniCard::setCardPuntuation() {
 //

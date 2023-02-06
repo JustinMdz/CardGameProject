@@ -1,11 +1,11 @@
 #include <iostream>
-#include "MarketOfMoni.h"
+#include "Game.h"
 using namespace std;
 
 int main()
 {
-	MarketOfMoni* cardMarket;
-	cardMarket = new MarketOfMoni();
+	Game* game;
+	game = new Game;
 
-	delete cardMarket;
+	delete game;
 }

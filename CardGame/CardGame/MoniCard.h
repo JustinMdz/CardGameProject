@@ -2,6 +2,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "MarketOfMoni.h"
+#include "CardDesign.h"
 
 using namespace std;
 using namespace sf;
@@ -15,20 +16,20 @@ private:
 	int* cardPuntuation;
 	string cardSideType;
 	bool cardSideStatus;
-	Texture* moniCardNameTexture = new Texture[6];
-	Sprite* moniCardNameSprite = new Sprite[6];
+
+	Sprite pointCardSprite;
+	Sprite moniCardSprite;
+
 
 public:
 	//MoniCard(Rules*, MoniCard*, MoniCard*);
+	MoniCard(Sprite, Sprite);
 	MoniCard(int*, MoniCard*, MoniCard*);
 	~MoniCard();
 	string getCardTypeSide();
 	bool getCardSide();
 	bool flipCard();
-	//void setCardPuntuation();
-    //int getCardPuntuation();
-	//void printCard();
-
-	void loadCardName();
-	void getSizeCard();
+	void setCardPuntuation();
+	int getCardPuntuation();
+	void printCard();
 };
