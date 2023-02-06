@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include <SFML/Graphics.hpp>
-
+#define quantityCard 54
 using namespace std;
 using namespace sf;
 
@@ -10,7 +10,10 @@ class MarketOfMoni
 {
 private:
 	
+	int repeatedCard = 0;
+	int numberOfMoniCard[quantityCard];
 	int marketSampleLimit = 6;
+	int idCard = 0;
 	Texture* moniMarketTexture = new Texture[marketSampleLimit];
 	Sprite* moniMarketSprite = new Sprite[marketSampleLimit];
 
@@ -19,11 +22,12 @@ public:
 	
 	void createMarket();
 	void getmarketPositionCard();
-	void drawMarket();
 	
 	bool checkMarketOfMoni();
 	bool checkRepeatedly();
 	void shuffleCard();
-	void resetEmptyStack();
+
+	void foundEmptyStack();
+	void refillEmptyStack();
 };
 

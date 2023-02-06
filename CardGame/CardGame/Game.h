@@ -15,8 +15,8 @@ private :
 	int alture = 950;
 
 	RenderWindow* gameBackground = new RenderWindow(VideoMode(broad, alture), "windowGame");
-	Texture* boarWoodTexture = new Texture;
-	Sprite* boarWoodSprite = new Sprite;
+	Texture* boardWoodTexture = new Texture;
+	Sprite* boardWoodSprite = new Sprite;
 
 	Font* fontOfMenu = new Font;
 	Text* gameTitle = new Text;
@@ -24,8 +24,8 @@ private :
 
 	Event* option = new Event;
 
-	Texture* boarPlayerTexture = new Texture;
-	Sprite* boarPlayerSprite = new Sprite;
+	Texture* boardPlayerTexture = new Texture;
+	Sprite* boardPlayerSprite = new Sprite;
 
 public:
 	Game();
@@ -36,7 +36,6 @@ public:
 
 	void creategameBackground();
 	void getWindow();
-	void checkOfWindow();
 
 	void createOptionMenu();
 	void getOptionMenu();

@@ -17,7 +17,7 @@ string Player::fillPlayersNames (string nameOfPlayer) {
 }
 
 bool Player::playerTurn(DeckOfCard* playerDeck, MoniCard* cardOneToTake, MoniCard* cardTwoToTake) {
-	playerDeck->grabPointCar(cardOneToTake);
+	playerDeck->grabPointCard(cardOneToTake);
 	playerDeck->grabMoniCard(cardOneToTake, cardTwoToTake);
 	return turnOfPlayer;
 }

@@ -17,9 +17,8 @@ public:
 	void fillDeck(MoniCard*);
 	void dealCard(DeckOfCard*, Node*, MoniCard*);
 	void evaluateDeck();
+
 	void printDeckCard();
 	void grabMoniCard(MoniCard*, MoniCard*);
-	void grabPointCar(MoniCard*);
-	//string toString();
-	~DeckOfCard();
+	void grabPointCard(MoniCard*);
 };

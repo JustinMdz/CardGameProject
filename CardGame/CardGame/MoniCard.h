@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "MarketOfMoni.h"
 #include "CardDesign.h"
+#include "Rules.h"
 
 using namespace std;
 using namespace sf;
@@ -13,7 +14,7 @@ private:
 
 	MoniCard* nextCard;
 	MoniCard* beforeCard;
-	int* cardPuntuation;
+	Rules* cardPuntuation;
 	string cardSideType;
 	bool cardSideStatus;
 
@@ -22,10 +23,8 @@ private:
 
 
 public:
-	//MoniCard(Rules*, MoniCard*, MoniCard*);
+	MoniCard(Rules*, MoniCard*, MoniCard*);
 	MoniCard(Sprite, Sprite);
-	MoniCard(int*, MoniCard*, MoniCard*);
-	~MoniCard();
 	string getCardTypeSide();
 	bool getCardSide();
 	bool flipCard();

@@ -2,10 +2,10 @@
 
 Game::Game() {
 
-	boarWoodTexture->loadFromFile("backgroundWood.png");
-	boarWoodSprite->setTexture(*boarWoodTexture);
-	boarWoodSprite->setScale((float)gameBackground->getSize().x / (float)boarWoodSprite->getTexture()->getSize().x,
-		(float)gameBackground->getSize().y / (float)boarWoodSprite->getTexture()->getSize().y);
+	boardWoodTexture->loadFromFile("backgroundWood.png");
+	boardWoodSprite->setTexture(*boardWoodTexture);
+	boardWoodSprite->setScale((float)gameBackground->getSize().x / (float)boardWoodSprite->getTexture()->getSize().x,
+		(float)gameBackground->getSize().y / (float)boardWoodSprite->getTexture()->getSize().y);
 
 	createOptionMenu();
 	getWindow();
@@ -13,8 +13,8 @@ Game::Game() {
 
 Game::~Game() {
 	delete gameBackground;
-	delete boarWoodSprite;
-	delete boarWoodTexture;
+	delete boardWoodSprite;
+	delete boardWoodTexture;
 	delete optionMenu;
 	delete fontOfMenu;
 }
@@ -50,7 +50,7 @@ void Game::createOptionMenu() {
 void Game::creategameBackground() {
 
 	gameBackground->clear();
-	gameBackground->draw(*boarWoodSprite);
+	gameBackground->draw(*boardWoodSprite);
 	gameBackground->draw(*gameTitle);
 	for (int i = 0; i < numberOfOption; i++) {
 		gameBackground->draw(optionMenu[i]);
@@ -58,7 +58,7 @@ void Game::creategameBackground() {
 	//for (int i = 0; i < 9; i++) {
 	//	gameBackground->draw(moniMarketSprite[i]);
 	//}
-	gameBackground->draw(*boarPlayerSprite);
+	gameBackground->draw(*boardPlayerSprite);
 	gameBackground->display();
 }
 
@@ -93,17 +93,18 @@ void Game::getOptionPrincipalMenu() {
 
 void Game::getOption() {
 	if (option->key.code == Keyboard::Return) {
-		if (selectOption == 3) {
-			exit(1);
-		}
+
 		if (selectOption == 0) {
 			gameBackground->clear();
-			boarPlayerTexture->loadFromFile("PlayerBackgroundWood.png");
-			boarPlayerSprite->setTexture(*boarPlayerTexture);
-			boarPlayerSprite->setScale((float)gameBackground->getSize().x / (float)boarPlayerSprite->getTexture()->
-				getSize().x,(float)gameBackground->getSize().y / (float)boarPlayerSprite->getTexture()->getSize().y);
-			//MarketOfMoni market;
-			//market.createMarket();
+			boardPlayerTexture->loadFromFile("PlayerBackgroundWood.png");
+			boardPlayerSprite->setTexture(*boardPlayerTexture);
+			boardPlayerSprite->setScale((float)gameBackground->getSize().x / (float)boardPlayerSprite->getTexture()->
+				getSize().x,(float)gameBackground->getSize().y / (float)boardPlayerSprite->getTexture()->getSize().y);
+			MarketOfMoni market;
+			market.createMarket();
+		}
+		if (selectOption == 3) {
+			exit(1);
 		}
 	}
 }

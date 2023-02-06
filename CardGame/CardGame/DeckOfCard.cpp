@@ -1,7 +1,8 @@
 #include "DeckOfCard.h"
 
 DeckOfCard::DeckOfCard() {
-	first = current = NULL;
+	this->first = NULL;
+	this->current = NULL;
 }
 
 void DeckOfCard::fillDeck(MoniCard* card) {
@@ -23,20 +24,16 @@ void DeckOfCard::fillDeck(MoniCard* card) {
 
 void DeckOfCard::grabMoniCard(MoniCard* firstCardToTake, MoniCard* secondCardToTake) {
 
-	//llenar vector de listas de cartas de moni
 	if ((firstCardToTake->flipCard() == true) && (secondCardToTake->flipCard() == true)) {
 		fillDeck(firstCardToTake);
-		//delete nodo de market
 		fillDeck(secondCardToTake);
-		//delete nodo de market
 	}
 }
 
-void DeckOfCard::grabPointCar(MoniCard* cardToTake) {
+void DeckOfCard::grabPointCard(MoniCard* cardToTake) {
 
 	if (cardToTake->flipCard() == false) {
 		fillDeck(cardToTake);
-		//delete nodo de market
 	}
 }
 
@@ -51,14 +48,3 @@ void DeckOfCard::dealCard(DeckOfCard* victimsDeck, Node* stolenCard, MoniCard* c
 		}
 	}
 }
-
-//string DeckOfCard::toString() {
-//	stringstream ss;
-//	current = first;
-//	ss << "Point Cards." << endl;
-//	while (current != NULL) {
-//		ss << current->toString() << endl;
-//		current = current->getNextNode();
-//	}
-//	return ss.str();
-//}

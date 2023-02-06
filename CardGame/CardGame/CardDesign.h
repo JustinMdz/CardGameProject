@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#define  quantityCards 54
 using namespace std;
 using namespace sf;
 
@@ -8,11 +9,10 @@ class CardDesign
 {
 private:
 
-	int quantityCards = 54;
-	Texture pointCardTexture[54];
-	Sprite pointCardSprite[54];
-	Texture moniCardTexture[54];
-	Sprite moniCardSprite[54];
+	Texture pointCardTexture[quantityCards];
+	Sprite pointCardSprite[quantityCards];
+	Texture moniCardTexture[quantityCards];
+	Sprite moniCardSprite[quantityCards];
 
 
 public:

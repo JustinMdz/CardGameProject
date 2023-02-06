@@ -25,7 +25,9 @@
     <ClCompile Include="Rules.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="CardDesign.cpp" />
+    <ClCompile Include="CardDesign.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DeckOfCard.h">
